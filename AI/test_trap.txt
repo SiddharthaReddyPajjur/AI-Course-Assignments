@@ -1,0 +1,23 @@
+Comments - The Greedy Trap
+C TC 10
+C DF 5
+C PM 2
+C GJ 1
+Group size
+G 2
+Inputs
+I 1 2 -1
+Outputs
+O 13 -1
+Assignment list
+A 1 1 2 3 GJ
+A 2 1 2 4 PM
+A 3 1 2 5 DF
+A 4 3 4 6 TC
+A 5 4 5 7 TC
+A 6 3 5 8 TC
+A 7 6 7 9 PM
+A 8 7 8 10 DF
+A 9 6 8 11 GJ
+A 10 9 10 12 TC
+A 11 11 12 13 DF
