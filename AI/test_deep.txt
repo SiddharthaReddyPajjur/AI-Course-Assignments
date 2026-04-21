@@ -1,0 +1,22 @@
+Comments - Deep Chain Test
+C TC 1
+C DF 2
+C PM 3
+C GJ 1
+Group size
+G 3
+Inputs
+I 1 2 3 -1
+Outputs
+O 13 -1
+Assignment list
+A 1 1 2 4 TC
+A 2 2 3 5 PM
+A 3 4 5 6 DF
+A 4 1 6 7 GJ
+A 5 4 7 8 TC
+A 6 5 8 9 PM
+A 7 6 9 10 DF
+A 8 7 10 11 GJ
+A 9 8 11 12 TC
+A 10 9 12 13 DF

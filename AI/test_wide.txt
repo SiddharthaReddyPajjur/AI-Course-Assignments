@@ -1,0 +1,22 @@
+Comments - Wide Graph Test
+C TC 5
+C DF 2
+C PM 3
+C GJ 1
+Group size
+G 3
+Inputs
+I 1 2 -1
+Outputs
+O 3 4 5 6 7 8 9 10 11 12 -1
+Assignment list
+A 1 1 2 3 TC
+A 2 1 2 4 TC
+A 3 1 2 5 TC
+A 4 1 2 6 DF
+A 5 1 2 7 DF
+A 6 1 2 8 PM
+A 7 1 2 9 PM
+A 8 1 2 10 GJ
+A 9 1 2 11 GJ
+A 10 1 2 12 GJ
