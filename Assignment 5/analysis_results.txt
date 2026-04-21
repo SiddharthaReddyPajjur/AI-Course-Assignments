@@ -1,0 +1,56 @@
+Assignment 5 Results
+
+Task 1.2: Policy Evaluation
+Policy:
+- High -> Search
+- Low -> Wait
+- Charging -> Wait
+
+Values:
+- High: 18.108100
+- Low: 9.999992
+- Charging: 16.297289
+
+Task 2.2: Optimal Policy from Value Iteration
+- High -> Search
+- Low -> Search
+- Charging -> Wait
+
+Optimal Values V*:
+- High: 29.643827
+- Low: 25.808210
+- Charging: 26.679443
+
+Task 3.2: Final Policy from Policy Iteration
+- High -> Search
+- Low -> Search
+- Charging -> Wait
+
+Final Values:
+- High: 29.643827
+- Low: 25.808210
+- Charging: 26.679443
+
+Task 4.1: Compare Value Iteration and Policy Iteration
+- Value Iteration needed 142 sweeps of the Bellman optimality update.
+- Policy Iteration needed 2 policy-evaluation phases.
+- Policy Iteration typically stabilises in fewer policy changes because each improvement step makes a globally greedy update from the current value estimates.
+
+Task 4.2: Convergence Behavior
+- During convergence, all state values rise from 0 and settle to their long-run discounted returns.
+- Value Iteration applies a max over actions at every sweep, so it directly moves toward V*.
+- Policy Evaluation follows one fixed policy, so it converges to that policy's value function rather than optimising at each step.
+
+Task 4.3: Optimal Policy Interpretation
+- High: Search is optimal because it gives a strong immediate reward and still has a high chance to remain in High.
+- Low: Search is still optimal here because its expected immediate reward is better than waiting and it may move back to High.
+- Charging: Wait is the only allowed action, and it deterministically returns the robot to High.
+
+Task 4.4: Practical Insight
+- This policy helps a battery-powered robot balance productivity and energy recovery.
+- It formalises when the robot should keep working versus when it should conserve or recharge, which improves long-term performance.
+
+Note on the reward table:
+- The assignment asks for R to be shape (3, 2), but the Low/Search row in the transition table gives two different rewards depending on next state.
+- To keep R as a 2D array exactly as required, this implementation uses the expected immediate reward for Low/Search:
+  R[Low, Search] = 0.4*(-3) + 0.6*(4) = 1.2
